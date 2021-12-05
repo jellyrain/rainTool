@@ -6,9 +6,9 @@ import * as array from './array'
 import * as object from './object'
 import * as string from './string'
 
-function jTool() {
+function rainTool() {
     console.log({
-        version: jTool.version,
+        version: rainTool.version,
         calculate: calculate.version,
         oui: oui.version,
         method: method.version,
@@ -19,35 +19,35 @@ function jTool() {
     });
 }
 
-jTool.version = '1.2.0'
-// jTool.calculate = calculate
-// jTool.oui = oui
-// jTool.method = method
-// jTool.loading = loading
-// jTool.array = array
-// jTool.object = object
-// jTool.string = string
+rainTool.version = '1.2.0'
+// rainTool.calculate = calculate
+// rainTool.oui = oui
+// rainTool.method = method
+// rainTool.loading = loading
+// rainTool.array = array
+// rainTool.object = object
+// rainTool.string = string
 
 for (var key in calculate) {
-    jTool[key] = calculate[key]
+    rainTool[key] = calculate[key]
 }
 for (var key in oui) {
-    jTool[key] = oui[key]
+    rainTool[key] = oui[key]
 }
 for (var key in method) {
-    jTool[key] = method[key]
+    rainTool[key] = method[key]
 }
 for (var key in loading) {
-    jTool[key] = loading[key]
+    rainTool[key] = loading[key]
 }
 for (var key in array) {
-    jTool[key] = array[key]
+    rainTool[key] = array[key]
 }
 for (var key in object) {
-    jTool[key] = object[key]
+    rainTool[key] = object[key]
 }
 for (var key in string) {
-    jTool[key] = string[key]
+    rainTool[key] = string[key]
 }
 
 if (window.console && window.console.log) {
@@ -60,4 +60,4 @@ if (window.console && window.console.log) {
     ].join('\n'));
 };
 
-export default jTool
+export default rainTool

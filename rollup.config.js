@@ -5,7 +5,7 @@ export default {
     output: {
         file: 'dist/rainTool-expand.min.js',
         format: 'umd',
-        name: 'jTool',
+        name: 'rainTool',
         // sourcemap: true
     },
     plugins: [
