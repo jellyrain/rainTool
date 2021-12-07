@@ -5,6 +5,7 @@ import * as loading from './loading'
 import * as array from './array'
 import * as object from './object'
 import * as string from './string'
+import * as listener from './listener'
 
 function rainTool() {
     console.log({
@@ -15,7 +16,8 @@ function rainTool() {
         loading: loading.version,
         array: array.version,
         object: object.version,
-        string: string.version
+        string: string.version,
+        listener: listener.version
     });
 }
 
@@ -27,6 +29,7 @@ rainTool.version = '1.2.0'
 // rainTool.array = array
 // rainTool.object = object
 // rainTool.string = string
+// rainTool.listener = listener
 
 for (var key in calculate) {
     rainTool[key] = calculate[key]
@@ -48,6 +51,9 @@ for (var key in object) {
 }
 for (var key in string) {
     rainTool[key] = string[key]
+}
+for (var key in listener) {
+    rainTool[key] = listener[key]
 }
 
 if (window.console && window.console.log) {
