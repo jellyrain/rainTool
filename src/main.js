@@ -6,6 +6,7 @@ import * as array from './array'
 import * as object from './object'
 import * as string from './string'
 import * as listener from './listener'
+import * as file from './file'
 
 function rainTool() {
     console.log({
@@ -17,44 +18,21 @@ function rainTool() {
         array: array.version,
         object: object.version,
         string: string.version,
-        listener: listener.version
+        listener: listener.version,
+        file: file.version
     });
 }
 
-rainTool.version = '1.2.0'
-// rainTool.calculate = calculate
-// rainTool.oui = oui
-// rainTool.method = method
-// rainTool.loading = loading
-// rainTool.array = array
-// rainTool.object = object
-// rainTool.string = string
-// rainTool.listener = listener
-
-for (var key in calculate) {
-    rainTool[key] = calculate[key]
-}
-for (var key in oui) {
-    rainTool[key] = oui[key]
-}
-for (var key in method) {
-    rainTool[key] = method[key]
-}
-for (var key in loading) {
-    rainTool[key] = loading[key]
-}
-for (var key in array) {
-    rainTool[key] = array[key]
-}
-for (var key in object) {
-    rainTool[key] = object[key]
-}
-for (var key in string) {
-    rainTool[key] = string[key]
-}
-for (var key in listener) {
-    rainTool[key] = listener[key]
-}
+rainTool.version = '1.3.0'
+rainTool.calculate = calculate
+rainTool.oui = oui
+rainTool.method = method
+rainTool.loading = loading
+rainTool.array = array
+rainTool.object = object
+rainTool.string = string
+rainTool.listener = listener
+rainTool.file = file
 
 if (window.console && window.console.log) {
     console.log([

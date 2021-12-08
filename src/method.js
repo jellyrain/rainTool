@@ -177,6 +177,10 @@ export var eventBus = (function () {
 
 // uuid 
 export var uuid = {
+    // 生成当前时间戳  随机输出指定的进制
+    time: function (progressiveSystem) {
+        return (Math.random() * Date.now()).toString(progressiveSystem).replace('.', '')
+    },
     // 生成随机数， 随机输出指定的长度  6位起步 
     number: function (length) {
         return Math.round(Math.random() * Math.pow(10, length))
