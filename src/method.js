@@ -290,15 +290,18 @@ export var PubSub = (function () {
     }
 })()
 
+// 等待函数
 export function sleep(func, seconds) {
     setTimeout(func, seconds * 1000)
 }
 
+// 堵塞js 的等待函数
 sleep.sync = function (seconds) {
     var start = new Date().getTime()
     while (new Date().getTime() - start < seconds * 1000) { }
 }
 
+// promise 版本 等待函数
 sleep.promise = function (seconds) {
     return new Promise(function (resolve, reject) {
         setInterval(function () {

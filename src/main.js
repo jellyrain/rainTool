@@ -23,7 +23,7 @@ function rainTool() {
     });
 }
 
-rainTool.version = '1.4.0'
+rainTool.version = '1.5.0'
 rainTool.calculate = calculate
 rainTool.oui = oui
 rainTool.method = method
