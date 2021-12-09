@@ -290,4 +290,21 @@ export var PubSub = (function () {
     }
 })()
 
-export var version = '1.6.0'
+export function sleep(func, seconds) {
+    setTimeout(func, seconds * 1000)
+}
+
+sleep.sync = function (seconds) {
+    var start = new Date().getTime()
+    while (new Date().getTime() - start < seconds * 1000) { }
+}
+
+sleep.promise = function (seconds) {
+    return new Promise(function (resolve, reject) {
+        setInterval(function () {
+            resolve()
+        }, seconds * 1000);
+    })
+}
+
+export var version = '1.7.0'

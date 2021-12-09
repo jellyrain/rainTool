@@ -23,6 +23,9 @@ function processing(file, id) {
         spark.append(data)
         files[id]['md5'] = spark.end()
     })
+    path(file, function (data) {
+        files[id]['path'] = data
+    })
 }
 
 export function base64(file, callback) {
@@ -57,6 +60,15 @@ export function md5(file, callback) {
     })
 }
 
+export function path(file, callback) {
+    var filepath = URL.createObjectURL(file)
+    callback(filepath)
+}
+
+export function revokePath(id) {
+    URL.revokeObjectURL(files[id].path)
+}
+
 export function read() {
     return files
 }
@@ -65,8 +77,20 @@ export function fileDelete(id) {
     delete files[id]
 }
 
+export function readId() {
+    var ids = []
+    for (var key in files) {
+        ids.push(key)
+    }
+    return ids
+}
+
 export function clear() {
+    var ids = readId()
+    for (var i = 0; i < ids.length; i++) {
+        revokePath(ids[i])
+    }
     files = {}
 }
 
-export var version = '1.2.0'
+export var version = '1.4.0'
