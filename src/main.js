@@ -7,6 +7,7 @@ import * as object from './object'
 import * as string from './string'
 import * as listener from './listener'
 import * as file from './file'
+import * as templateEngine from './templateEngine'
 
 function rainTool() {
     console.log({
@@ -19,7 +20,8 @@ function rainTool() {
         object: object.version,
         string: string.version,
         listener: listener.version,
-        file: file.version
+        file: file.version,
+        templateEngine: templateEngine.version
     });
 }
 
@@ -33,6 +35,7 @@ rainTool.object = object
 rainTool.string = string
 rainTool.listener = listener
 rainTool.file = file
+rainTool.templateEngine = templateEngine
 
 if (window.console && window.console.log) {
     console.log([

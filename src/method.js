@@ -310,4 +310,14 @@ sleep.promise = function (seconds) {
     })
 }
 
+// 根据字符串查询数组值
+export function lookup(obj, key) {
+    var temp = obj
+    var keys = key.split('.')
+    for (var i = 0; i < keys.length; i++) {
+        temp = temp[keys[i]]
+    }
+    return temp
+}
+
 export var version = '1.7.0'

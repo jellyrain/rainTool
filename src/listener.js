@@ -4,6 +4,7 @@ var listenerData = {}
 var keyIdData = {}
 var prevObj = {}
 
+// 注册对象
 export function register(obj) {
     var objId = uuid.string(8)
     listenerData[objId] = {}
@@ -20,6 +21,7 @@ export function register(obj) {
     }
 }
 
+// 监听其中一项属性
 export function listen(id, key, getCallback, setCallback) {
     Object.defineProperty(listenerData[id], key, {
         get: function () {
@@ -37,12 +39,14 @@ export function listen(id, key, getCallback, setCallback) {
     })
 }
 
+// 监听全部属性
 export function listenAll(id, getCallback, setCallback) {
     for (var key in keyIdData[id]) {
         listen(id, key, getCallback, setCallback)
     }
 }
 
+// 查看内部对象
 export function read() {
     return { listenerData, keyIdData, prevObj }
 }
