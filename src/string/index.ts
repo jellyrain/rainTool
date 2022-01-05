@@ -2,14 +2,15 @@ import { reverse, palindrome, truncate } from './string'
 
 class Str {
     constructor(public str: string) { }
-    reverse() {
-        reverse(this.str)
+
+    reverse(): string {
+        return reverse(this.str)
     }
-    palindrome() {
-        palindrome(this.str)
+    palindrome(): boolean {
+        return palindrome(this.str)
     }
-    truncate(number: number) {
-        truncate(this.str, number)
+    truncate(number: number): string {
+        return truncate(this.str, number)
     }
 }
 

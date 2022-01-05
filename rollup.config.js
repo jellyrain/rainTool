@@ -8,9 +8,9 @@ import progress from 'rollup-plugin-progress'
 export default {
     input: 'src/main.ts',
     output: {
-        file: 'dist/rainComponent.min.js',
+        file: 'dist/rainTool.min.js',
         format: 'umd',
-        name: 'rainComponent',
+        name: 'rainTool',
         sourcemap: true
     },
     plugins: [
