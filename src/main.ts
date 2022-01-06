@@ -5,7 +5,7 @@ import { PubSub } from './pubsub/index'
 import { Lookup } from './lookup/index'
 import { Clone } from './clone/index'
 import { Sleep } from './sleep/index'
-
+import { DeTh } from './deth/index'
 
 function str(str: string): Str {
     return new Str(str)
@@ -35,4 +35,8 @@ function sleep(func: Function): Sleep {
     return new Sleep(func)
 }
 
-export { str, uid, bus, pubsub, lookup, clone, sleep }
+function deth(func: Function): DeTh {
+    return new DeTh(func)
+}
+
+export { str, uid, bus, pubsub, lookup, clone, sleep, deth }
