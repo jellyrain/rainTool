@@ -3,6 +3,8 @@ import { Uid } from './uid/index'
 import { Bus } from './bus/index'
 import { PubSub } from './pubsub/index'
 import { Lookup } from './lookup/index'
+import { Clone } from './clone/index'
+import { Sleep } from './sleep/index'
 
 
 function str(str: string): Str {
@@ -25,4 +27,12 @@ function lookup(obj: object): Lookup {
     return new Lookup(obj)
 }
 
-export { str, uid, bus, pubsub, lookup }
+function clone(target: object): Clone {
+    return new Clone(target)
+}
+
+function sleep(func: Function): Sleep {
+    return new Sleep(func)
+}
+
+export { str, uid, bus, pubsub, lookup, clone, sleep }
