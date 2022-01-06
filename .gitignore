@@ -128,4 +128,5 @@ dist
 
 # My configurations:
 .vscode/
+!dist/
 test/
